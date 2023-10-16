@@ -1,14 +1,14 @@
-input.onButtonPressed(Button.A, function () {
+input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     basic.showString("" + input.temperature() + " Grad")
+})
+input.onButtonEvent(Button.AB, input.buttonEventClick(), function () {
+    basic.showCompass(5000)
+})
+input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
+    basic.showNumber(randint(0, 9))
 })
 input.onGesture(Gesture.Shake, function () {
     basic.clearScreen()
-})
-input.onButtonPressed(Button.AB, function () {
-    basic.showCompass(5000)
-})
-input.onButtonPressed(Button.B, function () {
-    basic.showNumber(randint(0, 9))
 })
 basic.showString("HALLO!")
 music.startMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.Once)
